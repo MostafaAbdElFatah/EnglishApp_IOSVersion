@@ -1,0 +1,18 @@
+//
+//  Constants.swift
+//  EnglishApp
+//
+//  Created by Mostafa AbdEl Fatah on 10/25/18.
+//  Copyright © 2018 Mostafa AbdEl Fatah. All rights reserved.  EE82EE
+//
+
+import Foundation
+import UIKit
+struct WordsImagesArrays {
+    public static let numbersImages:[UIImage] = [ #imageLiteral(resourceName: "number_0"), #imageLiteral(resourceName: "number_1"), #imageLiteral(resourceName: "number_2"), #imageLiteral(resourceName: "number_3"), #imageLiteral(resourceName: "number_4"), #imageLiteral(resourceName: "number_5"), #imageLiteral(resourceName: "number_6"), #imageLiteral(resourceName: "number_7"), #imageLiteral(resourceName: "number_8"), #imageLiteral(resourceName: "number_9")
+        , #imageLiteral(resourceName: "number_10"), #imageLiteral(resourceName: "number_11"), #imageLiteral(resourceName: "number_12"), #imageLiteral(resourceName: "number_13"), #imageLiteral(resourceName: "number_14"), #imageLiteral(resourceName: "number_15"), #imageLiteral(resourceName: "number_16"), #imageLiteral(resourceName: "number_17"), #imageLiteral(resourceName: "number_18"), #imageLiteral(resourceName: "number_19"), #imageLiteral(resourceName: "number_20"), #imageLiteral(resourceName: "number_30"), #imageLiteral(resourceName: "number_40"), #imageLiteral(resourceName: "number_50"), #imageLiteral(resourceName: "number_60"), #imageLiteral(resourceName: "number_70"), #imageLiteral(resourceName: "number_80"), #imageLiteral(resourceName: "number_90"), #imageLiteral(resourceName: "number_100")
+    ]
+    public static let familyImages:[UIImage] = [ #imageLiteral(resourceName: "family_grandparent"), #imageLiteral(resourceName: "family_grandfather"), #imageLiteral(resourceName: "family_grandmother"), #imageLiteral(resourceName: "family_husband"), #imageLiteral(resourceName: "family_wife"), #imageLiteral(resourceName: "family_parent"), #imageLiteral(resourceName: "family_father"), #imageLiteral(resourceName: "family_mother"), #imageLiteral(resourceName: "family_children"), #imageLiteral(resourceName: "family_son"), #imageLiteral(resourceName: "family_daughter")
+        , #imageLiteral(resourceName: "family_sister"), #imageLiteral(resourceName: "family_brother"), #imageLiteral(resourceName: "family_grandson"), #imageLiteral(resourceName: "family_granddaughter"), #imageLiteral(resourceName: "family_uncle"), #imageLiteral(resourceName: "family_aunt"), #imageLiteral(resourceName: "family_niece"), #imageLiteral(resourceName: "family_nephew"), #imageLiteral(resourceName: "family_cousin"), #imageLiteral(resourceName: "family_father_in_law"), #imageLiteral(resourceName: "family_mother_in_law"), #imageLiteral(resourceName: "family_brother_in_law"), #imageLiteral(resourceName: "family_sister_in_law")]
+     public static let colors:[UIColor] = [ #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1), #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1), #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1), #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1), #colorLiteral(red: 0.6679978967, green: 0.4751212597, blue: 0.2586010993, alpha: 1), #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.568627451, alpha: 1), #colorLiteral(red: 0.9018455577, green: 0.274910136, blue: 0.9139236992, alpha: 1), #colorLiteral(red: 0.5791940689, green: 0.1280144453, blue: 0.5726861358, alpha: 1), #colorLiteral(red: 1, green: 0.1607843137, blue: 0.4078431373, alpha: 1) ]
+}

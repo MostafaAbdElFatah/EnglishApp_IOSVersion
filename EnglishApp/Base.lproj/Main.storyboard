@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pgn-uP-LH7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="hoF-Ka-Ybu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tabBarController id="pgn-uP-LH7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UoW-Q6-0dS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uHe-RJ-kDo" kind="relationship" relationship="viewControllers" id="7ZK-4E-MGB"/>
+                        <segue destination="IzR-KW-gQN" kind="relationship" relationship="viewControllers" id="pCJ-b2-Rhd"/>
+                        <segue destination="FFn-6f-Nyr" kind="relationship" relationship="viewControllers" id="Ek9-dY-sxk"/>
+                        <segue destination="duY-gr-Muh" kind="relationship" relationship="viewControllers" id="Cbg-uh-nYo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxT-Vh-bQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="130"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="jah-9p-gEV">
+            <objects>
+                <tableViewController id="IzR-KW-gQN" customClass="FamilyTableViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vD2-CC-7TH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="IzR-KW-gQN" id="ylv-OO-gGt"/>
+                            <outlet property="delegate" destination="IzR-KW-gQN" id="SBm-uF-oRd"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Family" image="icons8-family-48" id="oZC-OC-6dR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnB-W9-XM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="278" y="903"/>
+        </scene>
+        <!--Numbers-->
+        <scene sceneID="Axb-Fp-wMJ">
+            <objects>
+                <tableViewController id="uHe-RJ-kDo" customClass="NumberTableViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KYV-Hv-TgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="uHe-RJ-kDo" id="DU6-Wc-DWc"/>
+                            <outlet property="delegate" destination="uHe-RJ-kDo" id="ebH-GX-vMQ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Numbers" image="icons8-numbers-48" id="0mz-Lx-Xwt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJF-bP-kJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="903"/>
+        </scene>
+        <!--Colors-->
+        <scene sceneID="O9o-m3-8T4">
+            <objects>
+                <tableViewController id="FFn-6f-Nyr" customClass="ColorTableViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Um1-PH-J7r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FFn-6f-Nyr" id="sse-5J-2X9"/>
+                            <outlet property="delegate" destination="FFn-6f-Nyr" id="4ud-9s-sBC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Colors" image="icons8-paint-palette-48" id="rz3-34-o43"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiF-d7-g20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034" y="903"/>
+        </scene>
+        <!--Phrases-->
+        <scene sceneID="09T-sA-HcK">
+            <objects>
+                <tableViewController id="duY-gr-Muh" customClass="PhrasesTableViewController" customModule="EnglishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NmX-Qq-zkD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="duY-gr-Muh" id="kv6-4l-3Tg"/>
+                            <outlet property="delegate" destination="duY-gr-Muh" id="2Nv-Nk-LIx"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Phrases" id="wjE-y7-PgA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-20"/>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQP-D4-7je" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="903"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-family-48" width="48" height="48"/>
+        <image name="icons8-numbers-48" width="48" height="48"/>
+        <image name="icons8-paint-palette-48" width="48" height="48"/>
+    </resources>
 </document>

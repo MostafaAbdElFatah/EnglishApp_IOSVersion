@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="49" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="EnglishApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T6R-af-kiJ">
+                        <rect key="frame" x="5" y="7.5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Udl-vU-7Tj"/>
+                            <constraint firstAttribute="height" constant="60" id="Vy6-g1-8FM"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Th-Sm-114">
+                        <rect key="frame" x="67" y="0.0" width="252" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عربي" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBS-iu-TU8">
+                                <rect key="frame" x="5" y="10" width="207" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTB-nG-tyH">
+                                <rect key="frame" x="5" y="41" width="207" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-play-24" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-Dh-bkk">
+                                <rect key="frame" x="217" y="22" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DJi-vt-qu8"/>
+                                    <constraint firstAttribute="height" constant="30" id="uRP-sH-tHK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LTB-nG-tyH" secondAttribute="bottom" constant="10" id="7je-LZ-VgI"/>
+                            <constraint firstAttribute="trailing" secondItem="dbe-Dh-bkk" secondAttribute="trailing" constant="5" id="UpJ-lX-Xvh"/>
+                            <constraint firstItem="dbe-Dh-bkk" firstAttribute="leading" secondItem="LTB-nG-tyH" secondAttribute="trailing" constant="5" id="eJk-GX-JaL"/>
+                            <constraint firstItem="BBS-iu-TU8" firstAttribute="top" secondItem="7Th-Sm-114" secondAttribute="top" constant="10" id="jdC-xa-tUa"/>
+                            <constraint firstItem="LTB-nG-tyH" firstAttribute="top" secondItem="BBS-iu-TU8" secondAttribute="bottom" constant="7" id="ldx-R3-qd3"/>
+                            <constraint firstItem="LTB-nG-tyH" firstAttribute="leading" secondItem="7Th-Sm-114" secondAttribute="leading" constant="5" id="n82-Jv-moe"/>
+                            <constraint firstItem="BBS-iu-TU8" firstAttribute="leading" secondItem="7Th-Sm-114" secondAttribute="leading" constant="5" id="qrT-1M-6jZ"/>
+                            <constraint firstItem="dbe-Dh-bkk" firstAttribute="leading" secondItem="BBS-iu-TU8" secondAttribute="trailing" constant="5" id="yJT-e4-mku"/>
+                            <constraint firstItem="dbe-Dh-bkk" firstAttribute="centerY" secondItem="7Th-Sm-114" secondAttribute="centerY" id="yWX-lY-Gyb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7Th-Sm-114" secondAttribute="trailing" id="5mQ-bG-onu"/>
+                    <constraint firstItem="7Th-Sm-114" firstAttribute="leading" secondItem="T6R-af-kiJ" secondAttribute="trailing" constant="2" id="G4w-aY-0hN"/>
+                    <constraint firstItem="7Th-Sm-114" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gbr-lV-qii"/>
+                    <constraint firstAttribute="bottom" secondItem="7Th-Sm-114" secondAttribute="bottom" id="M1u-wj-WEh"/>
+                    <constraint firstItem="T6R-af-kiJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hCF-AP-dXe"/>
+                    <constraint firstItem="T6R-af-kiJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7.5" id="moc-iV-bpD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="arabicLabel" destination="BBS-iu-TU8" id="CPG-ZJ-ioM"/>
+                <outlet property="bgView" destination="7Th-Sm-114" id="pAD-iA-JpP"/>
+                <outlet property="englishLabel" destination="LTB-nG-tyH" id="zHe-yj-Qts"/>
+                <outlet property="leadingImageViewContraint" destination="hCF-AP-dXe" id="mpr-OH-m8M"/>
+                <outlet property="leadingbBViewConstraint" destination="G4w-aY-0hN" id="8gH-rv-2gW"/>
+                <outlet property="widthImageConstraint" destination="Udl-vU-7Tj" id="5Wn-fS-FxZ"/>
+                <outlet property="wordImageView" destination="T6R-af-kiJ" id="oGE-Ve-lJd"/>
+            </connections>
+            <point key="canvasLocation" x="89.5" y="69.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icons8-play-24" width="24" height="24"/>
+    </resources>
+</document>
