@@ -17,8 +17,20 @@ class PhrasesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(PhrasesTableViewController.swipeRight(_:)))
+        swipeRight.direction = [.right]
+        tableView.addGestureRecognizer(swipeRight)
+        
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
+    
+    @objc func swipeRight(_ sender:UISwipeGestureRecognizer){
+        let tabBar: UITabBarController = self.tabBarController!
+        tabBar.selectedIndex -= 1
+    }
+    
+    
     func loadData(){
         if let path = Bundle.main.path(forResource: "phrases", ofType: "json"){
             do {

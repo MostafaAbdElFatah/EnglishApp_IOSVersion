@@ -17,8 +17,22 @@ class FamilyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(FamilyTableViewController.swipeLeft(_:)))
+        swipeLeft.direction = [.left]
+        tableView.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(FamilyTableViewController.swipeRight(_:)))
+        swipeRight.direction = [.right]
+        tableView.addGestureRecognizer(swipeRight)
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
+    
+    @objc func swipeLeft(_ gesture:UISwipeGestureRecognizer){
+        self.tabBarController?.selectedIndex += 1
+    }
+    @objc func swipeRight(_ gesture:UISwipeGestureRecognizer){
+        self.tabBarController?.selectedIndex -= 1
+    }
+    
     func loadData(){
         if let path = Bundle.main.path(forResource: "family", ofType: "json"){
             do {

@@ -17,8 +17,17 @@ class NumberTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(NumberTableViewController.swipeLeft(_:)))
+        swipeLeft.direction = [.left]
+        tableView.addGestureRecognizer(swipeLeft)
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
+    
+    @objc func swipeLeft(_ sender:UISwipeGestureRecognizer){
+        let tabBar: UITabBarController = self.tabBarController!
+        tabBar.selectedIndex += 1
+    }
+    
     func loadData(){
         if let path = Bundle.main.path(forResource: "numbers", ofType: "json"){
             do {

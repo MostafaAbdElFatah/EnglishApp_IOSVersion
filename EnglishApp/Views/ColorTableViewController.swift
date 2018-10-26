@@ -17,8 +17,22 @@ class ColorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ColorTableViewController.swipeLeft(_:)))
+        swipeLeft.direction = [.left]
+        tableView.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ColorTableViewController.swipeRight(_:)))
+        swipeRight.direction = [.right]
+        tableView.addGestureRecognizer(swipeRight)
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
+    
+    @objc func swipeLeft(_ gesture:UISwipeGestureRecognizer){
+        self.tabBarController?.selectedIndex += 1
+    }
+    @objc func swipeRight(_ gesture:UISwipeGestureRecognizer){
+        self.tabBarController?.selectedIndex -= 1
+    }
+    
     func loadData(){
         if let path = Bundle.main.path(forResource: "colors", ofType: "json"){
             do {
